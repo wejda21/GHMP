@@ -1,0 +1,14 @@
+[Unit]
+Description=Custom Python Video Player
+After=network.target
+
+[Service]
+ExecStart=/home/pi/custom_player.sh
+WorkingDirectory=/home/pi/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
